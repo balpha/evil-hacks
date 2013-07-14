@@ -45,6 +45,9 @@ import java.lang.reflect.Method;
  * haven't dug deeply enough into the guts of Android to check whether we're guaranteed to find the message
  * in the queue, but I think that we're not if the timing is unfortunate.
  *
+ * Also note that everything needs to happen in the same UI thread, i.e. you can't use this for e.g. launching
+ * from inside one app an activity inside a different app.
+ *
  * Tested on an HTC One X running Jelly Bean (4.1.1) and on an HTC Desire runing Gingerbread.
  *
  * Usage:
